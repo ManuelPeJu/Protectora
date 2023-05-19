@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const pruebaRouter = require("./prueba")
 
 
 //Aca tienen que poner los require de las cargas que hacen
@@ -6,7 +7,7 @@ const { Router } = require("express");
 const mainRouter = Router();
 
 
-
+mainRouter.use("/prueba", pruebaRouter);
 
 
 
