@@ -1,18 +1,21 @@
 import React from 'react'
+import perro1 from "../CSS/images/pug.jpg"
+import perro2 from "../CSS/images/husky.jpg"
+import perro3 from "../CSS/images/labrador.jpg"
 
 const CarouselB = () => {
     return (
         <>
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="..." />
+                <div class="carousel-item active">
+                    <img src={perro1} class="d-block" width="250px" height="250px" alt="..." />
                     </div>
                     <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..." />
+                    <img src={perro2} class="d-block" width="250px" height="250px" alt="..." />
                     </div>
                     <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..." />
+                    <img src={perro3} class="d-block" width="250px" height="250px" alt="..." />
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

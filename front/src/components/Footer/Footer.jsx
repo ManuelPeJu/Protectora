@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Contacto = () => {
+const Footer = () => {
     return (
         <div>
             <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
@@ -24,4 +24,4 @@ const Contacto = () => {
     )
 }
 
-export default Contacto
+export default Footer

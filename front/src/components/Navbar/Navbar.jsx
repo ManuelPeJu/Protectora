@@ -9,7 +9,7 @@ const Navbar = () => {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar-toggler">
-                    <a class="navbar-brand" href="">
+                    <a class="navbar-brand" href="/Home">
                         <b>Doggy's</b>
                     </a>
                     <ul class="navbar-nav d-flex justify-content-center align-items-start">
