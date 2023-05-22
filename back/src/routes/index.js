@@ -1,13 +1,14 @@
 const { Router } = require("express");
-const pruebaRouter = require("./prueba")
-
+const dogsRouter = require("./dogs")
+const tempsRouter = require("./temperaments")
 
 //Aca tienen que poner los require de las cargas que hacen
 
 const mainRouter = Router();
 
 
-mainRouter.use("/prueba", pruebaRouter);
+mainRouter.use("/dogs", dogsRouter);
+mainRouter.use("/temperaments", tempsRouter);
 
 
 

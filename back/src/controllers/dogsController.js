@@ -9,10 +9,8 @@ const getAllDogs = async () => {
         return {
             id: el.id,
             name: el.name,
-            min_height: el.height.metric.split("-")[0].trim(),
-            max_height: el.height.metric.split("-").reverse()[0].trim(),
-            min_weight: el.weight.metric.split("-")[0].trim(),
-            max_weight: el.weight.metric.split("-").reverse()[0].trim(),
+            height: el.height.metric,
+            weight: el.weight.metric,
             life_span: el.life_span,
             image: el.image.url,
             temperament: el.temperament,
