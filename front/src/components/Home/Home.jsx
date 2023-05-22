@@ -1,27 +1,34 @@
 import React from 'react'
 import CarouselA from '../Carousel/CarouselA';
 import CarouselB from '../Carousel/CarouselB';
-import Contacto from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 
 import Navbar from '../Navbar/Navbar';
 
 const Home = () => {
     return (
-        <div>
-           <Navbar />
-          
-            <div className='d-flex'>
-                <CarouselA />
-                <div className='container-fluid'>
-                    <h1 className=''>hola</h1>
+        <>
+            <navbar>
+                <Navbar />
+            </navbar>
+            
+                <div className='d-flex justify-content-center'>
+                    <CarouselA />
+                    <div className='d-flex justify-content-center'>
+                        <h1>hola</h1>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <CarouselB ></CarouselB>
-            </div>
-
-            <Contacto />
-        </div>
+                
+                <div className="d-flex justify-content-center">
+                    <div className='d-flex justify-content-center'>
+                        <h1>hola</h1>
+                    </div>
+                    <CarouselB />   
+                </div>
+            <footer>
+                <Footer />
+            </footer>
+        </>
     )
 }
 
