@@ -1,13 +1,16 @@
+import { GET_ALL_DOGS } from "../actions";
+
 
 const initalState = {
-
+    allDogs : [],
 }
 
 function rootReducer(state = initalState, action) {
     switch (action.type) {
-        case "EXAMPLE":
+        case GET_ALL_DOGS:
             return {
                 ...state,
+                allDogs: action.payload,
             }
     
         default:

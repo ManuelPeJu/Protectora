@@ -1,8 +1,12 @@
 body {
     background-color: whitesmoke;
     background-size: cover;
+    min-height: 100vh;
 }
 
+main {
+    height: 100vh;
+}
 
 section {
     display: flex;
