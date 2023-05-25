@@ -2,32 +2,26 @@ import React from 'react'
 import CarouselA from '../Carousel/CarouselA';
 import CarouselB from '../Carousel/CarouselB';
 import Footer from '../Footer/Footer';
+import Card from '../Card/Card';
 
 import Navbar from '../Navbar/Navbar';
 
 const Home = () => {
     return (
         <>
-            <navbar>
-                <Navbar />
-            </navbar>
-            
-                <div className='d-flex justify-content-center'>
-                    <CarouselA />
+            <main>
+                <div className='d-flex justify-content-center'>         
                     <div className='d-flex justify-content-center'>
-                        <h1>hola</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, cum in? Corporis ipsam obcaecati alias nemo. Expedita, facilis error quia ut inventore reiciendis hic, repudiandae dolorum, incidunt ipsum harum magni?</p>
                     </div>
                 </div>
-                
+                        
                 <div className="d-flex justify-content-center">
                     <div className='d-flex justify-content-center'>
-                        <h1>hola</h1>
-                    </div>
-                    <CarouselB />   
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptas aut incidunt quod molestiae animi nesciunt, perferendis deleniti. Maxime quae ducimus aliquid enim praesentium ipsam vitae sit debitis, temporibus possimus.</p>
+                    </div>                    
                 </div>
-            <footer>
-                <Footer />
-            </footer>
+            </main>
         </>
     )
 }
