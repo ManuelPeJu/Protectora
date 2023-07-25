@@ -1,0 +1,21 @@
+.card {
+    background-color: #e7eaf6;   
+    border: 15px solid;
+    border-radius: 12px;
+    border-color: #1C3C55;
+    color: red;
+    justify-content: center;
+    margin: 20px;
+    display: grid;
+    grid-template-rows: 250 auto auto;
+    box-shadow: 9px 9px 4px 0px rgba(0, 0, 0, 0.500);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: auto auto auto ;   
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
