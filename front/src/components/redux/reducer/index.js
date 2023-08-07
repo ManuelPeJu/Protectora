@@ -1,4 +1,7 @@
-import { GET_ALL_DOGS } from "../actions";
+import {
+    GET_ALL_DOGS,
+    CREATE_USER,
+ } from "../actions";
 
 
 const initalState = {
@@ -12,6 +15,10 @@ function rootReducer(state = initalState, action) {
                 ...state,
                 allDogs: action.payload,
             }
+        case CREATE_USER:
+            return {
+            ...state,
+            };
     
         default:
             return state;

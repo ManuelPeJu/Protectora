@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Paginado ({dogsPerPage, allDogs, paginado}) {
+export default function Paginado ({dogsPerPage, allDogs, paginado, currentPage}) {
     const pageNumber = []
 
     for (let i = 0; i < Math.ceil(allDogs/dogsPerPage); i++) {
@@ -8,12 +8,16 @@ export default function Paginado ({dogsPerPage, allDogs, paginado}) {
     } // redondea todos los perros sobre la cantidad de perros que quiero por páginas
 
     return (
-        <nav className='paginado'>
-            <ul>
-                { 
-                        pageNumber.map(number =>(
-                            <button className='pagination-buttons' key={number} onClick={() => paginado(number)}>{number}</button>
-                        )) // el map sirve para renderizar por separado, es decir yo le paso el paginado con el numero de páginas
+        <nav aria-label="...">
+            <ul className="pagination paginado">
+                {
+                pageNumber.map(number => (
+                    <li className={`page-item ${number === currentPage ? 'active' : ''}`} key={number}>
+                    <a className="page-link" href="#" onClick={() => paginado(number)}>
+                        {number}
+                    </a>
+                    </li>
+                ))
                 }
             </ul>
         </nav>

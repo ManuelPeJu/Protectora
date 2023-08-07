@@ -5,23 +5,26 @@
     justify-content: center;
     list-style: none;
     cursor: pointer;
+    margin-top: 15px;
 
     
 }
 
-.pagination-buttons {
-    background-color: #1b2234;
-    color: whitesmoke;
-    border-radius: 5px;
-    /* font-weight: bold; */
-    height: 25px;
-    border-width: 0px;
-    margin: 2px;
-    padding: 5px;
-    width: 50px;
-    transition-duration: 0,6s;
-    cursor: pointer;
-}
+// .pagination-buttons {
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #1b2234;
+//     color: whitesmoke;
+//     border-radius: 5px;
+//     font-weight: bold;
+//     height: 25px;
+//     border-width: 0px;
+//     margin: 3px;
+//     padding: 5px;
+//     width: 50px;
+//     transition-duration: 0,6s;
+//     cursor: pointer;
+// }
 
 button:hover {
     background-color: #3E6C89;
