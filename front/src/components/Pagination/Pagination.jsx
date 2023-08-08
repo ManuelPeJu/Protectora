@@ -13,7 +13,7 @@ export default function Paginado ({dogsPerPage, allDogs, paginado, currentPage})
                 {
                 pageNumber.map(number => (
                     <li className={`page-item ${number === currentPage ? 'active' : ''}`} key={number}>
-                    <a className="page-link" href="#" onClick={() => paginado(number)}>
+                    <a className="page-link" onClick={() => paginado(number)}>
                         {number}
                     </a>
                     </li>
