@@ -26,34 +26,64 @@ const Dogs = () => {
         dispatch(getAllDogs());
     },[dispatch])
 
+    // const handleFilterChange = (e) => {
+    //     // Dispatch an action to update filters in Redux store
+    //     dispatch(setFilters(e.target.value));
+    // };
+
+    // const handleSearchChange = (e) => {
+    //     // Dispatch an action to update search term in Redux store
+    //     dispatch(setSearchTerm(e.target.value));
+    // };
+
     return (
-        <>  
-            <div>
-                <div className='Pagination'>
-                    <Paginado 
-                        dogsPerPage={dogsPerPage}
-                        allDogs={allDogs.length}
-                        paginado={paginado}
-                    />
-                </div>
-               
-			<div className='card-grid'>
-			{
-						currentDogs.length ?
-                        currentDogs && currentDogs.map( el => (
-								<Card 
-									id={el.id}
-									name={el.name} 
-									image={el.image} 
-									key={el.id}
-								/>
-							))
-						:
-						<div className='loading'></div>
-					}
-			</div>
+        <div className='dogs__main'>  
+            
+                
+            <div className='Pagination'>
+                <Paginado 
+                    dogsPerPage={dogsPerPage}
+                    allDogs={allDogs.length}
+                    paginado={paginado}
+                />
             </div>
-        </>
+
+            <div className='dogs-aside'>
+                <aside className='dogs-aside__main'>
+                    <h4 className='dogs-aside__h4'>
+                        Busque su canino!
+                    </h4>
+                    <input
+                        type="text"
+                        placeholder="Buscar..."
+                        // onChange={handleSearchChange}
+                    />
+                    <select>
+                    {/* onChange={handleFilterChange} */}
+                        <option value="breed">Por raza</option>
+                        <option value="size">Por tamaño</option>
+                        {/* Add more filter options */}
+                    </select>
+                    {/* Additional filter components */}
+                </aside>
+            </div>
+                
+            <div className='card-grid'>
+                {
+                    currentDogs.length ?
+                    currentDogs && currentDogs.map( el => (
+                            <Card 
+                                id={el.id}
+                                name={el.name} 
+                                image={el.image} 
+                                key={el.id}
+                             />
+                           ))
+                    :
+                    <div className="loading"></div>
+                }
+            </div>
+        </div>
     )
 }
 
