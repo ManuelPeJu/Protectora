@@ -1,17 +1,33 @@
-// .dogs__main {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: flex-start;
+.dogs__main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    // align-items: flex-start;
+}
+
+// .dogs__main>*{
+//     flex: 1 150px
 // }
 
-.dogs-aside {
-    flex: 1;
+.dogs__combo {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+
+.dogs-aside {
     flex-direction: column;
     align-items: flex-end;
     padding: 20px;
-    background-color: #f0f0f0;
+    border: 12px solid black;
+    border-radius: 30px;
+    margin-right: 33px;
+    border-color: #bac9ff;
+
 }
+
 
 .dogs-aside__main {
     margin-bottom: 20px;
@@ -20,6 +36,8 @@
 .dogs-aside__h4 {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
 
 }
 
