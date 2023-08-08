@@ -10,7 +10,7 @@ import Paginado from '../Pagination/Pagination'
 const Dogs = () => {
     const dispatch = useDispatch();
     const allDogs = useSelector((state) => state.allDogs)
-    console.log(allDogs)
+    // console.log(allDogs)
 
     const [currentPage, setCurrentPage] = useState(1)// lo seteamos en 1 para que nuestra página inicial sea 1
     const [dogsPerPage, setDogsPerPage] = useState(9)// con esto seteamos la cantidad de perros que queremos por página
@@ -45,15 +45,11 @@ const Dogs = () => {
 									id={el.id}
 									name={el.name} 
 									image={el.image} 
-									diets={el.diets}
-									healthScore={el.healthScore}
 									key={el.id}
 								/>
 							))
 						:
-						<div className='loading'>
-							<h2>Loading...</h2>
-						</div>
+						<div className='loading'></div>
 					}
 			</div>
             </div>

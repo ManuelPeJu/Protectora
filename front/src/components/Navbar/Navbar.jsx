@@ -25,6 +25,9 @@ const Navbar = () => {
                     <li class="nav-item">
                         <a class="nav-link" href="/Contacto">Contacto</a>
                     </li>
+                    <li className='nav-item'>
+                        <a className='nav-link' href="/IniciarSesion">Iniciar Sesión</a>
+                    </li>
                     </ul>
                 </div>
             </div>

@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom'
 
 
 
-const Card = ({id, image, name, temperament}) => {
+const Card = ({id, image, name}) => {
 
 
     return (
         <>
-            <div className="card">
-                <img src={image} className="card-img-top" alt="img-card" />
-                <div className="card-body">
-                    <h5 className="card-title"><Link to={`/dogs/${id}`}>{name}</Link></h5>
-                    <p className="card-text">{temperament}</p>
-                </div>
+            <div class="card" style={{width: "18rem"}}>
+            <img src={image} class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">{name}</h5>
+                <a href={id} class="btn btn-primary">+Info</a>
+            </div>
             </div>
         </>
     )
@@ -22,3 +22,6 @@ const Card = ({id, image, name, temperament}) => {
 
 
 export default Card;
+
+
+

@@ -1,21 +1,42 @@
 .card {
     background-color: #e7eaf6;   
+    width: 300px;
     border: 15px solid;
     border-radius: 12px;
-    border-color: #1C3C55;
-    color: red;
+    border-image: url(../../images/paws-6757808_1920.png);
+    border-image-width: 50%;
     justify-content: center;
+    align-items: center;
     margin: 20px;
     display: grid;
-    grid-template-rows: 250 auto auto;
+    // grid-template-rows: 250 auto auto;
     box-shadow: 9px 9px 4px 0px rgba(0, 0, 0, 0.500);
+    overflow: hidden;
 }
 
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+    
+}
 .card-grid {
     display: grid;
     grid-template-columns: auto auto auto ;   
     justify-content: center;
+    text-align: center;
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
+    
 }
+
+.card-body {
+    background-color: whitesmoke;
+    border: 3px solid black;
+}
+
+// .card-img-top {
+//     object-fit: cover;
+
+// }
