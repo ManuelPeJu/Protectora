@@ -1,0 +1,29 @@
+// .dogs__main {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: flex-start;
+// }
+
+.dogs-aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.dogs-aside__main {
+    margin-bottom: 20px;
+}
+
+.dogs-aside__h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+
+}
+
+.dogs-aside__main p {
+    margin: 10px;
+}
+

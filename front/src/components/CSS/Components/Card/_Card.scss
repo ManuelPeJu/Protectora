@@ -1,15 +1,12 @@
 .card {
-    background-color: #e7eaf6;   
     width: 300px;
     border: 15px solid;
     border-radius: 12px;
     border-image: url(../../images/paws-6757808_1920.png);
     border-image-width: 50%;
-    justify-content: center;
     align-items: center;
     margin: 20px;
     display: grid;
-    // grid-template-rows: 250 auto auto;
     box-shadow: 9px 9px 4px 0px rgba(0, 0, 0, 0.500);
     overflow: hidden;
 }
