@@ -38,8 +38,6 @@ sequelize.models = Object.fromEntries(capsEntries);
 const { Dogs, Temperament } = sequelize.models;
 
 
-    // Aca vendrian las relaciones
-
     Dogs.belongsToMany(Temperament, { through: 'dog_temperament'});
 
     Temperament.belongsToMany(Dogs, { through: 'dog_temperament'});
