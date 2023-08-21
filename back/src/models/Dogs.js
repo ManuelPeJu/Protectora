@@ -19,6 +19,12 @@ module.exports = (sequelize) => {
           type: DataTypes.STRING,
           allowNull:false,
         },
+
+        breed : {
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+
         life_span: {
           type: DataTypes.STRING,
           allowNull: false
