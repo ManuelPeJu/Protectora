@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+// import { postUsers } from "../../redux/actions"
+
+
 
 const Register = () => {
     const disptach = useDispatch()
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const [input, setInput] = useState({
         name: "",
@@ -34,14 +37,14 @@ const Register = () => {
                     timer: 2000
                 })
             }
-            disptach(postUsers(input));
+            // disptach(postUsers(input));
             setInput({
                 name: "",
                 password: "",
                 email: "",
                 phoneNumber:"",
             })
-            history.push("/iniciarsesion")
+            navigate.push("/iniciarsesion")
             return Swal.fire ({
                 title:"Felicidades!",
                 text:"Registo completado",
@@ -53,7 +56,52 @@ const Register = () => {
         }
     }
   return (
-    <div>Register</div>
+    <>
+            <div className='main-form-register'>
+                <form className='fluid-container body-register-form' onSubmit={(e)=> handleSubmit(e)}>
+                    <div className='form-divs'>
+                        <label>Nombre: </label>
+                            <input className='body-input'
+                                type="text"
+                                value={input.correo}
+                                name="name"
+                                placeholder='Escriba su nombre...'
+                                onChange={handleChange}
+                            />
+
+                        <label>Password: </label>
+                            <input className='body-input'
+                                type="password"
+                                value={input.contraseña}
+                                name="password"
+                                placeholder='Escriba su contraseña...'
+                                onChange={handleChange}
+                            />
+
+                        <label>Email: </label>
+                            <input className='body-input'
+                                type="email"
+                                value={input.email}
+                                name="email"
+                                placeholder='Escriba su correo...'
+                                onChange={handleChange}
+                            />
+
+                        <label>Celular: </label>
+                            <input className='body-input'
+                                type="text"
+                                value={input.phoneNumber}
+                                name="phoneNumber"
+                                placeholder='Escriba su celular...'
+                                onChange={handleChange}
+                            />
+                        <br />
+                            <button className='register-btn' type='submit'>Registrarse!</button>
+                        <br />
+                    </div>
+                </form>
+            </div>
+        </>
   )
 }
 

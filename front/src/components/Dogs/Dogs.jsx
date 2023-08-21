@@ -10,7 +10,7 @@ import Paginado from '../Pagination/Pagination'
 const Dogs = () => {
     const dispatch = useDispatch();
     const allDogs = useSelector((state) => state.allDogs)
-    // console.log(allDogs)
+    console.log(allDogs)
 
     const [currentPage, setCurrentPage] = useState(1)// lo seteamos en 1 para que nuestra página inicial sea 1
     const [dogsPerPage, setDogsPerPage] = useState(9)// con esto seteamos la cantidad de perros que queremos por página
@@ -37,9 +37,7 @@ const Dogs = () => {
     // };
 
     return (
-        <div className='dogs__main'>  
-            
-                
+        <div className='dogs__main'>         
             <div className='Pagination'>
                 <Paginado 
                     dogsPerPage={dogsPerPage}
@@ -74,13 +72,30 @@ const Dogs = () => {
                             placeholder="Buscar..."
                             // onChange={handleSearchChange}
                         />
+                    </div>
+                    <div className='dogs-aside__main-2'>
                         <select>
-                        {/* onChange={handleFilterChange} */}
-                            <option value="breed">Por raza</option>
-                            <option value="size">Por tamaño</option>
-                            {/* Add more filter options */}
+                            <option value="breed">Por raza</option> 
+                            {
+                                allDogs.map((b) => {
+                                    return(
+                                        <option key={b} value={b}>{b.name}</option>
+                                    )
+                                })
+                            }   
                         </select>
-                        {/* Additional filter components */}
+                        <select>
+                            <option value="size">Por tamaño</option>
+                        </select>
+                        <select>
+                            <option value="age">Por edad</option>
+                        </select>
+                        <select>
+                            <option value="size">Por tamaño</option>
+                        </select>
+                        <select>
+                            <option value="size">Por tamaño</option>
+                        </select>
                     </div>
                 </aside>
             </div>

@@ -31,6 +31,21 @@
 
 .dogs-aside__main {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dogs-aside__main-2 {
+    display: flex;
+    max-width: 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.dogs-aside__main-2 select {
+    max-width: 175px;
 }
 
 .dogs-aside__h4 {
@@ -44,4 +59,5 @@
 .dogs-aside__main p {
     margin: 10px;
 }
+
 
