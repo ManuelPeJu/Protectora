@@ -1,6 +1,7 @@
 const { Router } = require("express");
 
 const userRouter = Router();
+const { checkAuth, checkAdminAuth } = require("../middleware/auth");
 
 const {
     userByIdHandler,
@@ -9,7 +10,7 @@ const {
     editUserHandler,
     deleteUserHandler,
     setAdminHandler,
-  } = require("../handlers/usersHandler");
+  } = require("../handlers/userHandler");
 
 userRouter.get("/", checkAuth, checkAdminAuth([true]), getUsersHandler);
 userRouter.post("/", createUserHandler);

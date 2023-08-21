@@ -21,8 +21,6 @@ const createUser = async (name, password, email, phoneNumber) => {
       include: [
         { model: Address, as: "Addresses" },
         { model: Critic, as: "Critics" },
-        { model: Order, as: "Orders" },
-        { model: Booking, as: "bookings" },
       ],
       attributes: { exclude: ["password"] },
     });
