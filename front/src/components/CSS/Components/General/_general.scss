@@ -1,3 +1,7 @@
+// .app {
+//     padding-bottom:60px;
+// }
+
 * {
     margin: 0;
     padding: 0;
@@ -97,6 +101,11 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+body.swal2-shown > [aria-hidden="true"] {
+    transition: 0.1s filter;
+    filter: blur(10px);
+  }
+
 
 @keyframes spin {
     to {
@@ -107,6 +116,7 @@ h1 {
 /* Estilos para dispositivos con un ancho máximo de 600px */
 @media (max-width: 600px) {
 
+    
   }
   
   /* Estilos para dispositivos con un ancho máximo de 900px */
